@@ -1,5 +1,0 @@
-( =  sq  0 )
-( =  sq ( *  i  i ))
-( =  sq ( +  sq ( *  i  i )))
-( IF ( <  i  10 )( =  sq ( +  sq ( *  i  i ))))
-( FOR ( Cond_Loopstmts ( <  i  10 )( =  i ( +  i  1 )))( Init_&_Increment ( =  i  0 )( <  i  10 )))
