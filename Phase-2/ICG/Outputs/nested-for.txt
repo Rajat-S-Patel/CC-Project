@@ -1,0 +1,67 @@
+a = 4
+i = 1
+L0: 
+T0 = i < 10
+T1 = not T0
+if T1 goto L1
+goto L2
+L3: 
+T2 = i + 1
+i = T2
+goto L0 
+L2: 
+T3 = a + 1
+a = T3
+j = 2
+L4: 
+T4 = j < 10
+T5 = not T4
+if T5 goto L5
+goto L6
+L7: 
+T6 = j + 2
+j = T6
+goto L4 
+L6: 
+T7 = a * a
+c = T7
+goto L7 
+L5: 
+goto L3 
+L1: 
+Intermediate Code Generation (Quadruple Form):
+
+_______________________________________________________________________________________________________
+=        	 4        	 (null)   	 a      
+=        	 1        	 (null)   	 i      
+Label    	 (null)   	 (null)   	 L0     
+<        	 i        	 10       	 T0     
+not      	 T0       	 (null)   	 T1     
+if       	 T1       	 (null)   	 L1     
+goto     	 (null)   	 (null)   	 L2     
+Label    	 (null)   	 (null)   	 L3     
++        	 i        	 1        	 T2     
+=        	 T2       	 (null)   	 i      
+goto     	 (null)   	 (null)   	 L0     
+Label    	 (null)   	 (null)   	 L2     
++        	 a        	 1        	 T3     
+=        	 T3       	 (null)   	 a      
+=        	 2        	 (null)   	 j      
+Label    	 (null)   	 (null)   	 L4     
+<        	 j        	 10       	 T4     
+not      	 T4       	 (null)   	 T5     
+if       	 T5       	 (null)   	 L5     
+goto     	 (null)   	 (null)   	 L6     
+Label    	 (null)   	 (null)   	 L7     
++        	 j        	 2        	 T6     
+=        	 T6       	 (null)   	 j      
+goto     	 (null)   	 (null)   	 L4     
+Label    	 (null)   	 (null)   	 L6     
+*        	 a        	 a        	 T7     
+=        	 T7       	 (null)   	 c      
+goto     	 (null)   	 (null)   	 L7     
+Label    	 (null)   	 (null)   	 L5     
+goto     	 (null)   	 (null)   	 L3     
+Label    	 (null)   	 (null)   	 L1     
+
+_______________________________________________________________________________________________________

@@ -1,0 +1,38 @@
+a = 4
+c = 5
+T0 = a < 5
+T1 = not T0
+if T1 goto L0
+T2 = a < 3
+T3 = not T2
+if T3 goto L1
+e = 5
+L1: 
+b = 6
+T4 = c < 5
+L0: 
+T5 = not T4
+if T5 goto L2
+d = 4
+L2: 
+Intermediate Code Generation (Quadruple Form):
+
+_______________________________________________________________________________________________________
+=        	 4        	 (null)   	 a      
+=        	 5        	 (null)   	 c      
+<        	 a        	 5        	 T0     
+not      	 T0       	 (null)   	 T1     
+if       	 T1       	 (null)   	 L0     
+<        	 a        	 3        	 T2     
+not      	 T2       	 (null)   	 T3     
+if       	 T3       	 (null)   	 L1     
+=        	 5        	 (null)   	 e      
+Label    	 (null)   	 (null)   	 L1     
+=        	 6        	 (null)   	 b      
+<        	 c        	 5        	 T4     
+not      	 T4       	 (null)   	 T5     
+if       	 T5       	 (null)   	 L2     
+=        	 4        	 (null)   	 d      
+Label    	 (null)   	 (null)   	 L2     
+
+_______________________________________________________________________________________________________
